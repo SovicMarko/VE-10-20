@@ -42,7 +42,7 @@ console.log(tekst.replace("nije","je"));
 
 console.log(tekst.toUpperCase());
 console.log(tekst.toLowerCase());
-eljovana1@hotmail.com
+
 console.log(tekst.charAt(0));
 
 // Korisnik unosi tekst, zatim se na ekranu 
