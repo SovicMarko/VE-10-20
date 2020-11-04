@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+#board {
+    width: 404px;
+    height: 404px;
+    border: 2px solid black;
+}
+.feild {
+    width: 50px;
+    height: 50px;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+    font-size: 40px;
+}
+
+.black {
+    background-color: lightgray;
+}
