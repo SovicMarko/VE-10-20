@@ -7,7 +7,7 @@ class Figura {
         this.col = null;
         this.row = null;
         this.poljaKretanja = [];
-        this.attackPlaces = [];
+        this.poljaNapada = [];
     }
 
     odrediPoziciju = function () {
@@ -26,16 +26,24 @@ class Kralj extends Figura {
     }
 
     pronadjiPoteze = function() {
-        console.log("AAAA");
         for (let i = -1; i <= 1; i++) {
             for (let j = -1; j <= 1; j++) {
                 if (i == 0 && j == 0) {}
                 else {
                     var lokacija = col[this.col + i] + (this.row + j);
-                    if (polja[lokacija] != undefined) {
-                        this.poljaKretanja.push(lokacija)
+                    if (polja[lokacija] != undefined &&
+                        polja[lokacija].figura != null) {
+                        if (this.boja != polja[lokacija].figura.boja) {
+                            this.poljaNapada.push(lokacija)
+                        }
+                    }
+                    else if (polja[lokacija] != undefined) {
+                        this.poljaKretanja.push(lokacija);
                     }
                 }
+
+                console.log(this.poljaKretanja);
+                console.log("Napad" + this.poljaNapada);
             }
         }
     }
@@ -66,6 +74,17 @@ class Pijun extends Figura {
 
         }
     }
+}
+
+class Lovac extends Figura {
+    constructor(boja) {
+        var simbol = "";
+        if (boja.indexOf("b") == 0) simbol = "&#9815;"
+        else simbol = "&#9821;"
+        super(boja, simbol) 
+    }
+
+
 }
 
 // asocijativni niz
