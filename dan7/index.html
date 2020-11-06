@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        #polje {
+            width: 200px;
+            height: 200px;
+            margin-top: 40px;
+            border: 2px solid black;
+        }
+
+        body {
+            padding-bottom: 100px;
+        }
+
+        .polje {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        #polje1 {
+            background-color: lightblue;
+        }
+         #polje2 {
+            background-color: lightgreen;
+        }
+        #polje3 {
+            background-color: lightsalmon;
+        }
+        #polje4 {
+            background-color: lightsteelblue;
+            position: relative;
+            transition: background-color 2s;
+        }
+        #polje5 {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="naslov">Ovo je naslov</h1>
+    <ul>
+        <li>Stavka 1</li>
+        <li class="plava">Stavka 2</li>
+        <li>Stavka 3</li>
+        <li class="plava">Stavka 4</li>
+        <li class="plava">Stavka 5</li>
+    </ul>
+
+    <button id="dugme">Klikni me</button>
+
+    <div id="polje"></div>
+
+    <hr>
+
+    <button id="dugme11">Hide</button>
+    <button id="dugme12">Show</button>
+    <button id="dugme13">Toggle</button>
+    <div class="polje" id="polje1"></div>
+    <hr>
+    <button id="dugme21">fadeOut</button>
+    <button id="dugme22">fadeIn</button>
+    <button id="dugme23">fadeToggle</button>
+    <div class="polje" id="polje2"></div>
+    <hr>
+    <button id="dugme31">slideUp</button>
+    <button id="dugme32">slideDown</button>
+    <button id="dugme33">slideToggle</button>
+    <div class="polje" id="polje3"></div>
+    <hr>
+    <button id="dugme41">Animacija 1</button>
+    <button id="dugme42">Stop</button>
+    <div class="polje" id="polje4"></div>
+    <hr>
+    <button id="dugme51">Lancano</button>
+    <div class="polje" id="polje5"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
