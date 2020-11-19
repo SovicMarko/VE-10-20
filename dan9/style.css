@@ -1,0 +1,27 @@
+.navbar {
+    border-radius: 0px;
+    background-color: #0a1f16;
+    margin-bottom: 0px;
+}
+
+img {
+    max-width: 80%;
+}
+
+.proizvodi {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.dodaj-u-korpu {
+    float: right;
+}
+
+.modal-dialog {
+    width: 70%;
+}
+
+.korpa-slika {
+    width: 80px;
+}
