@@ -4,8 +4,17 @@
     margin-bottom: 0px;
 }
 
-img {
+.kartica img {
     max-width: 80%;
+    max-height: 200px;
+}
+
+.kartica .panel-heading {
+    height: 80px;
+}
+
+.kartica .panel-body {
+    height: 250px;
 }
 
 .proizvodi {
@@ -23,5 +32,8 @@ img {
 }
 
 .korpa-slika {
-    width: 80px;
+    max-width: 80px;
+    max-height: 80px;
+    display: block;
+    margin: auto;
 }
