@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <style>
+        .zelena {
+            color: green;
+        }
+        .podvuceno {
+            text-decoration: underline;
+        }
+        .uokvireno {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <h1> {{ ime }} </h1>
+        <p> {{ 5 + 5 }} </p>
+        <p> {{ ime }} {{ prezime }} </p>
+        <h2> Godine: {{ godine }} </h2>
+        <button v-on:click="godine--">Smanji godine</button>
+        <button v-on:click="godine++">Povecaj godine</button>
+        <p v-if="godine > 17">Osoba je punoletna</p>
+        <p v-else>Osoba je maloletna</p>
+        <h3 v-show="zaposlen">Osoba je zaposlena</h3>
+        <button v-on:click="zaposlen = !zaposlen">Promeni status</button>
+        <ul>
+            <li v-for="element in radnoIskustvo">{{element}}</li>
+        </ul>
+        <h4>{{adresa.ulica}} {{adresa.broj}}, {{adresa.grad}}</h4>
+
+        <hr>
+
+        <a v-bind:href="website">Ovo je link</a>
+        <br> <br>
+        <input v-bind:type="tipUnosa">
+        <button v-on:click="promenaTipaUnosa">
+            <span v-if="tipUnosa == 'password'">Prikazi</span>
+            <span v-else>Sakrij</span>
+        </button>
+        <br> <br>
+        <p>{{poruka}}</p>
+        <input type="text" v-model="poruka">
+
+        <hr>
+        <p>{{pozdrav('Dobar dan')}}</p>
+        <p>{{pozdrav('Dobro vece')}}</p>
+        <hr>
+        <div v-for="osoba in stanari">
+            <h3>{{osoba.ime}}</h3>
+            <h4>{{osoba.godine}}</h4>
+        </div>
+        <h4>Prosek godina stanara je: {{izracunajProsek}}</h4>
+        <div>
+            Unesite ime <input type="text" v-model="novoIme"> <br><br>
+            Unesite godine <input type="text" v-model="noveGodine"> <br><br>
+            <button v-on:click="unosStanara">Potvrdi</button>
+        </div>
+
+        <p v-bind:style=" 'color:' + bojaTeksta + '; background-color:' + pozadinskaBoja">Ovo je tekst koji menja boju</p>
+        <button v-on:click="bojaTeksta = 'blue'">Oboji u plavo</button>
+        <input type="color" v-model="pozadinskaBoja">
+
+        <hr>
+        <h3 v-bind:class="{zelena: zelena, podvuceno: podvuceno, uokvireno: uokvireno}">Ovo je neki tekst koji manja klase</h3>
+        <button v-on:click="zelena = !zelena">Zelena</button>
+        <button v-on:click="podvuceno = !podvuceno">Podvuceno</button>
+        <button v-on:click="uokvireno = !uokvireno">Uokvireno</button>
+    </div>
+
+
+    <p> {{ 5 + 5 }} </p>
+
+    <script src="script.js"></script>
+</body>
+</html>
